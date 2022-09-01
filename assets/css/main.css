@@ -9,22 +9,28 @@ h2{
     font-size: 40px;
 
 }
-p,span{
-    color:#fff
-}
 .row{
     padding-left: 30px;
 }
-.text{
-    color: black;
+p, span .text{
+    color: #fff;
     font-size: 17px;
-    
-
+}
+span{
+    color: #fff;
 }
 .teste{
     position: relative;
     padding: 0;
     width: 210px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+}
+.tentando{
+    position: relative;
+    padding: 0;
+    /* width: 210px; */
     display: block;
     cursor: pointer;
     overflow: hidden;
@@ -54,8 +60,10 @@ p,span{
     transition-delay: 0s;
     transition-duration: 0.4s;
 }
-/* .teste .hiddenContent:hover .text{
-    opacity: 1;
-    transform: translateY(200px);
-    -webkit-transform: translateY(200px);
-} */
+.card-text{
+    color: black;
+}
+.hiddenContent .btn-primary{
+    background-color: #505152;
+    border-color: #505152;
+}

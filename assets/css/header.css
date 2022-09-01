@@ -7,4 +7,8 @@
 .nav-link{
     color: #fff;
     margin-left: 45px;
+    text-decoration: none;
+}
+.navbar-toggler{
+    color: #fff;
 }

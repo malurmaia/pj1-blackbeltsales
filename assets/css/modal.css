@@ -1,4 +1,30 @@
-.modal-dialog{
-    display: grid;
-   
+.modalitens{
+    color: black;
+    font-size: 25px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+.modal-body .col {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.form-label{
+    padding-top: 30px;
+    margin-bottom: 0.5rem;
+}
+label {
+    display: flex;
+}
+.modal-body .btn-primary {
+    color: #fff;
+    background-color: #505152;
+    border-color: #505152;
+    margin-left: 50px;
+}
+.form-control{
+    margin-bottom: 80px;
+}
+.col .btn-primary{
+    background-color: #505152;
+    border-color: #505152;
 }
