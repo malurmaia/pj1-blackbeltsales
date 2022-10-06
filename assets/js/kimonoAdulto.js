@@ -1,60 +1,70 @@
-const bermudas = [{
-        id:2,
-        name: "Bermuda Vouk - Branca",
-        image: "assets/img/bermuda1.png",
-        price: 179.0
-        },{
-        id:3,
-        name: "Bermuda RIP STOP - LIFESTYLE",
-        image: "assets/img/bermuda2.png",
-        price: 159.0
-        },{
-        id:4,
-        name: "Bermuda moletom masculina",
-        image: "assets/img/bermuda3.png",
-        price: 199.0
-        },{
-        id:5,
-        name: "Grappling Short - RAIZ",
-        image: "assets/img/bermuda4.png",
-        price: 149.0
-        },{
-        id:6,
-        name: "Board short Bali - Marrom",
-        image: "assets/img/bermuda5.png",
-        price: 69.0
-        },{
-        id:7,
-        name: "Board short Bali - Preto",
-        image: "assets/img/bermuda6.png",
-        price: 109.0
-        },{
-        id:8,
-        name: "Grappling short - Camuflado",
-        image: "assets/img/bermuda7.png",
-        price: 99.0
-        },{
-        id:9,
-        name: "Grappling short - Preto",
-        image: "assets/img/bermuda8.png",
-        price: 109.0
-        }
-    ]
-const kimonoInfantil = [{
-    id:35,
-    name: "Vouk Infantil - CORES",
-    image: "assets/img/kimonoinfantil.png",
+const kimonosAdulto = [{
+    id:22,
+    name: "Vouk PRETO - Limited Edition",
+    image: "assets/img/kafrica1.png",
     price: 299.0
-    }]      
-
-
-
-var itensRoot = document.getElementById('itens-root');
+    },{
+    id:23,
+    name: "Vouk Tsuru PRETO - limited Edition",
+    image: "assets/img/KTSURU1.jpg",
+    price: 499.0
+    },{
+    id:24,
+    name: "Vouk Águia - Limited Edition",
+    image: "assets/img/kbranU1.jpg",
+    price: 399.0
+    },{
+    id:25,
+    name: "Vouk Shark branco - Limited Edition",
+    image: "assets/img/kshark1.jpg",
+    price: 599.0
+    },{
+    id:26,
+    name: "Vouk Arara branco - Limited Edition",
+    image: "assets/img/kbranU2.jpg",
+    price: 289.0
+    },{
+    id:27,
+    name: "Vouk preto - Feminino",
+    image: "assets/img/kpretof1.png",
+    price: 289.0
+    },{
+    id:28,
+    name: "Vouk Tsuru BRANCO - limited Edition",
+    image: "assets/img/KTSURU2.jpg",
+    price: 499.0
+    },{
+    id:29,
+    name: "Vouk Jade PRETO - limited Edition",
+    image: "assets/img/kjade1.png",
+    price: 399.0
+    },{
+    id:30,
+    name: "Vouk PRETO - Masculino",
+    image: "assets/img/kpreto5.jpg",
+    price: 289.0
+    },{
+    id:31,
+    name: "Vouk RAIZ GOLD - limited Edition",
+    image: "assets/img/kgold1.jpg",
+    price: 799.0
+    },{
+    id:32,
+    name: "Vouk Tsuru AZUL - limited Edition",
+    image: "assets/img/kazul1.jpg",
+    price: 399.0
+    },{
+    id:33,
+    name: "Vouk AÇAÍ - Feminino",
+    image: "assets/img/kacai1.png",
+    price: 289.0
+    }]
+    var itensRoot = document.getElementById('itens-root');
 var col = document.createElement('div')
     col.classList.add('col-4');
     itensRoot.appendChild(col);
 
- for (let key of bermudas){
+ for (let key of kimonosAdulto){
     
   var card = document.createElement('div');
   card.classList.add('card');

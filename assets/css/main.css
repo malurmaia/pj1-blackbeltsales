@@ -67,3 +67,11 @@ span{
     background-color: #505152;
     border-color: #505152;
 }
+.card{
+    width: 300px;
+}
+
+img .card-img-top{
+    width: 210px;
+    height: 210px;
+}
