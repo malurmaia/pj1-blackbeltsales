@@ -47,8 +47,6 @@ const kimonoInfantil = [{
     price: 299.0
     }]      
 
-
-
 var itensRoot = document.getElementById('itens-root');
 var col = document.createElement('div')
     col.classList.add('col-4');
@@ -66,6 +64,7 @@ var col = document.createElement('div')
   var button = document.createElement('button');
   button.classList.add('btn','btn-primary');
   button.setAttribute('type','button');
+  button.setAttribute('id', btnModal)
   button.setAttribute('data-bs-toggle','modal');
   button.setAttribute('data-bs-target','#exemploModal');
   button.innerText = 'Visualização rápida';
@@ -85,14 +84,3 @@ var col = document.createElement('div')
   col.appendChild(card);
  }
  
-    // for (let key of bermudas){
-    // var img = document.getElementById('img');
-    // img.setAttribute('src',`${key.image}`);
-    // console.log(img)
-    // var cardBody = document.getElementById('card-text');
-    // cardBody.innerHTML = `${key.name}`;
-    // var cardPrice = document.getElementById('price');
-    // cardPrice.innerHTML = `R$${key.price}`
-
-
-    // }

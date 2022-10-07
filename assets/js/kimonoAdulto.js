@@ -60,28 +60,45 @@ const kimonosAdulto = [{
     price: 289.0
     }]
     var itensRoot = document.getElementById('itens-root');
-var col = document.createElement('div')
-    col.classList.add('col-4');
+
+    // window.addEventListener("resize", function() {
+    //     if (window.matchMedia("(min-width: 500px)").matches) {
+    //       console.log("Screen width is at least 500px")
+    //     } else {
+    //       console.log("Screen less than 500px")
+    //     }
+    //   })
+var col = document.createElement('div');
+if(window.screen.width <=768){
+    col.classList.add('row','row-cols-auto');
+    console.log(col)
+} else{
+    col.classList.add('row','row-cols-4');
+}
     itensRoot.appendChild(col);
 
  for (let key of kimonosAdulto){
     
   var card = document.createElement('div');
+  if(window.screen.width <=1199){
+    card.classList.add('card','col-sm-4');
+    console.log(col)
+} else{
   card.classList.add('card');
+}
   card.setAttribute('width','18rem');
   var img = document.createElement('img');
   img.setAttribute('src',`${key.image}`);
   img.classList.add('card-img-top');
   card.appendChild(img);
   var button = document.createElement('button');
-  button.classList.add('btn','btn-primary');
+  button.classList.add('btn');
   button.setAttribute('type','button');
   button.setAttribute('data-bs-toggle','modal');
   button.setAttribute('data-bs-target','#exemploModal');
   button.innerText = 'Visualização rápida';
   var cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
-  card.appendChild(cardBody);
   var cardTitle = document.createElement('h6');
   cardTitle.classList.add('card-title')
   cardTitle.innerHTML = `${key.name}`;
@@ -91,7 +108,7 @@ var col = document.createElement('div')
  card.appendChild(button);
  card.appendChild(cardTitle);
  card.appendChild(cardBody);
- card.appendChild(cardText);
+ cardBody.appendChild(cardText);
   col.appendChild(card);
  }
  
