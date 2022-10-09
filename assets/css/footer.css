@@ -1,7 +1,12 @@
 footer {
     background: #837f7f;
 }
-
+#colFooter{
+    margin-left: 0;
+}
+#rowAlign{
+    margin-left: 0;
+}
 /* p .icon{
     padding-left: 15px;
 } */

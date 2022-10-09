@@ -108,13 +108,11 @@ img .card-img-top{
         width: 300px;
     }
     .row{
-        margin-left:30px;
+        margin-left:90px;
         row-gap: 50px;
      }
   }
  
- @media (min-width: 1200px) {}
-
 
 
 /* p, span .text{
