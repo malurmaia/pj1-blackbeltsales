@@ -18,9 +18,15 @@ const camisasCompressao =[
         price: 249.0
             }
 ]        
- var itensRoot = document.getElementById('itens-root');
-var col = document.createElement('div')
-    col.classList.add('col-4');
+    var itensRoot = document.getElementById('itens-root');
+    var col = document.createElement('div');
+
+    if(window.screen.width <=768){
+    col.classList.add('row','row-cols-auto');
+    console.log(col)
+    } else{
+    col.classList.add('row','row-cols-4');
+    }
     itensRoot.appendChild(col);
 
  for (let key of camisasCompressao){

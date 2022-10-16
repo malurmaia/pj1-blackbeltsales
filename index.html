@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Belt Sales</title>
+    
     <script src="https://kit.fontawesome.com/46093ddb19.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="./assets/lib/slick/slick/slick-theme.css" type="text/css" />  -->
+    <link rel="stylesheet" href="./lib/slick-1.8.1/slick/slick.css" type="text/css" /> 
+    <link rel="stylesheet" href="./lib/slick-1.8.1/slick/slick-theme.css" type="text/css" /> 
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -91,81 +92,24 @@
     </button>
   </div>
 </section>
-<main   >
-    <h2 class="display-3">DESTAQUES</h2>
-    <div >
-      <i class="fa-solid fa-loader products-loading"></i>
+<main>
+  <h5 id="h5Destaque">DESTAQUES</h5>
+   <div class="container">
+    <div class="carousel slide" id="SlickCarousel" data-bs-ride="carousel">
+      <div class="carousel-inner" id="carousel-inner">
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#SlickCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#SlickCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="row">
-      <div class="col">
-      
-          <img src="assets/img/kacai1.png" alt="kimono" height="210" width="210">
-          <div class="hiddenContent">
-            <button id="btnModal">Visualização rápida
-            </button>
-          </div>
-        </button>
-      </div>
-        <p>
-          Vouk AÇAÍ PRETO 
-        </p>
-        <span>
-          R$399,90
-        </span>
-      </div>
-      <div class="col">
-      
-        <a href="#">
-          <img src="assets/img/kafrica1.png" alt="kimono"height="210" width="210">
-        </a>
-        <div class="hiddenContent">
-          <button  id="btnModal2">Visualização rápida
-          </button>
-        </div>
-        <p>
-          Vouk AFRICA PRETO 
-        </p>
-        <span>
-          R$479,90
-        </span>
-      </div>
-      </div>
-      <div class="col">
-      
-        <a href="#">
-          <img src="assets/img/kazul1.jpg" alt="kimono"height="210" width="210">
-        </a>
-        <div class="hiddenContent">
-          <button  id="btnModal3">Visualização rápida
-          </button>
-        </div>
-        <p>
-          Vouk Arara Azul 
-          </p>
-        <span>
-          R$399,90
-        </span>
-      </div>
-    </div>
-      <div class="col">
-      
-       <a href="#"> <img src="assets/img/kbranf1.jpg" alt="kimono"height="210" width="210">
-      </a>
-      <div class="hiddenContent">
-        <button  id="btnModal4">Visualização rápida
-        </button>
-      </div>
-        <p>
-          Vouk Arara FEMININO 
-        </p>
-        <span>
-          R$379,90
-        </span>
-      </div>
-    </div>
-    </div>
+
   </div>
-</main>
+   </div>
 <footer>
   <div class="container-fluid text-center">
     <div class="row align-items-start">
@@ -190,7 +134,10 @@
       </div>
     </div>
 </footer>
-
+<div id="spinner" class="d-flex align-items-center">
+    <strong>Loading...</strong>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  </div>
 <!-- Modal -->
 <div id="modal">
   <div id="modalContent">
@@ -200,8 +147,11 @@
 
 </div>
 <!-- fim dos modais --> 
-<!-- <script src="./assets/lib/slick/slick/slick.min.js"></script>  -->
- <script src="assets/js/modal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script src="assets/js/index.js"></script>
+<script src="assets/bootstrap/dist/js/bootstrap.bundle.js"></script> 
+<script type="text/javascript" src="/lib/slick-1.8.1/slick/slick.min.js"></script>
+</body>
 </body>
 </html>

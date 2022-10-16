@@ -1,26 +1,16 @@
 main{
     background: #2B2929
 }
-.btn{
-    background-color: #050506;
-    border-color: #1b1b1b;
-}
  .card{ 
    background-color: white ;
    
 }
-
-/* img .card-img-top{
-    width: 150px;
-    height: 150px;
-}  */
-/* .grid-container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-} */
+.btn{
+    background-color: #2B2929;
+    border: #6c757d;
+    margin-bottom: 15px;
+}
+ 
  h2{
     text-align: center;
     padding: 30px;
@@ -112,9 +102,24 @@ img .card-img-top{
         row-gap: 50px;
      }
   }
- 
-
-
+ .modal{
+    display: none;
+ }
+#spinner{
+    display: none;
+ }
+ .dynamicCarousel img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /* height: 300px; */
+ }
+ #h5Destaque{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'roboto';
+ }
 /* p, span .text{
     color: #fff;
     font-size: 17px;

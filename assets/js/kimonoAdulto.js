@@ -60,15 +60,10 @@ const kimonosAdulto = [{
     price: 289.0
     }]
     var itensRoot = document.getElementById('itens-root');
+ 
 
-    // window.addEventListener("resize", function() {
-    //     if (window.matchMedia("(min-width: 500px)").matches) {
-    //       console.log("Screen width is at least 500px")
-    //     } else {
-    //       console.log("Screen less than 500px")
-    //     }
-    //   })
 var col = document.createElement('div');
+
 if(window.screen.width <=768){
     col.classList.add('row','row-cols-auto');
     console.log(col)
@@ -78,7 +73,6 @@ if(window.screen.width <=768){
     itensRoot.appendChild(col);
 
  for (let key of kimonosAdulto){
-    
   var card = document.createElement('div');
   if(window.screen.width <=1199){
     card.classList.add('card','col-sm-4');
@@ -86,17 +80,35 @@ if(window.screen.width <=768){
 } else{
   card.classList.add('card');
 }
+
   card.setAttribute('width','18rem');
   var img = document.createElement('img');
+  var containerImage = document.createElement('div');
+  containerImage.setAttribute('id','containerImg');
+  containerImage.appendChild(img);
   img.setAttribute('src',`${key.image}`);
   img.classList.add('card-img-top');
-  card.appendChild(img);
+  card.appendChild(containerImage);
+
+  //  Modal btn
   var button = document.createElement('button');
-  button.classList.add('btn');
+  button.classList.add('btn','btn-primary');
   button.setAttribute('type','button');
+  button.setAttribute('id', 'btnModal')
   button.setAttribute('data-bs-toggle','modal');
-  button.setAttribute('data-bs-target','#exemploModal');
+  button.setAttribute('data-bs-target','#Modal');
   button.innerText = 'Visualização rápida';
+//     // modal   
+   card.addEventListener("click", function (event){
+    console.log(key)
+    document.getElementById('title').innerHTML = `${key.name}`;
+    var imgModal = document.getElementById('imgModal');
+    imgModal.setAttribute('src',`${key.image}`);
+    document.getElementById('price').innerHTML = `R$${key.price}`;
+    
+   })
+    
+// // fim do modal
   var cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
   var cardTitle = document.createElement('h6');
@@ -105,21 +117,30 @@ if(window.screen.width <=768){
   var cardText = document.createElement('p');
   cardText.classList.add('card-text');
   cardText.innerHTML = `R$${key.price}`
- card.appendChild(button);
  card.appendChild(cardTitle);
  card.appendChild(cardBody);
  cardBody.appendChild(cardText);
   col.appendChild(card);
- }
+  card.appendChild(button);
+
+  // Popover
+var popOver = document.getElementById('btnPopover');
+popOver.setAttribute('data-bs-title','Carrinho');
+popOver.setAttribute('data-bs-content',`${key.name} foi adicionado ao carrinho.`);
+
+
+// fim do popOver
+  
+}
+  
+  
+
+
  
-    // for (let key of bermudas){
-    // var img = document.getElementById('img');
-    // img.setAttribute('src',`${key.image}`);
-    // console.log(img)
-    // var cardBody = document.getElementById('card-text');
-    // cardBody.innerHTML = `${key.name}`;
-    // var cardPrice = document.getElementById('price');
-    // cardPrice.innerHTML = `R$${key.price}`
 
 
-    // }
+
+  
+
+
+  

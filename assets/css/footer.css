@@ -1,5 +1,11 @@
 footer {
     background: #837f7f;
+    animation: footer 2s;
+}
+@keyframes footer{
+    0% {background: #837f7f;}
+    50% {background: #757171;}
+    100% {background: #666262;}
 }
 #colFooter{
     margin-left: 0;

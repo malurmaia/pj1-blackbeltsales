@@ -1,61 +1,86 @@
-const rashGuard =[{
-    id:11,
-    name: "RASH GUARD ROSE - limited",
-    image: "assets/img/rash1.png",
-    price: 129.0
-    },{
-    id:12,
-    name: "RASH GUARD PLATINUM - limited",
-    image: "assets/img/rash2.png",
-    price: 129.0
-    },{
-    id:13,
-    name: "RASH GUARD COMPETITION - PERSONALIZADA",
-    image: "assets/img/rash3.png",
-    price: 249.0
-    },{
-    id:14,
-    name: "Rash Guard Manga Comprida - AZUL",
-    image: "assets/img/rash4.png",
-    price: 109.0
-    },{
-    id:15,
-    name: "Rash Guard Manga Curta - CORES",
-    image: "assets/img/rash5.png",
-    price: 99.0
-    },{
-    id:16,
-    name: "Rash Guard - BRANCA",
-    image: "assets/img/rash6.png",
-    price: 109.0
-    },{
-    id:17,
-    name: "Rash Guard - PRETA",
-    image: "assets/img/rash7.png",
-    price: 109.0
-    },{
-    id:18,
-    name: "Rash Guard - MARROM",
-    image: "assets/img/rash8.png",
-    price: 109.0
-    },{
-    id:19,
-    name: "Rash Guard - ROXA",
-    image: "assets/img/rash9.png",
-    price: 109.0
-    }]
+class rashGuard {
+    constructor (id, name, image, price){
+        this.id = id;
+        this.name  = name;
+        this.image = image;
+        this.price = price;
+    }
+}
+
+let rashGuards = [
+    new rashGuard( 
+    "11",
+    "RASH GUARD ROSE - limited",
+    "assets/img/rash1.png",
+     "129.0"
+    ),
+    new rashGuard(
+    "12",
+    "RASH GUARD PLATINUM - limited",
+     "assets/img/rash2.png",
+     "129.0"
+    ),
+    new rashGuard(
+    "13",
+    "RASH GUARD COMPETITION - PERSONALIZADA",
+     "assets/img/rash3.png",
+     "249.0"
+    ),
+    new rashGuard(
+        "14",
+    "Rash Guard Manga Comprida - AZUL",
+     "assets/img/rash4.png",
+     "109.0"
+    ),
+    new rashGuard(
+        "15",
+    "Rash Guard Manga Curta - CORES",
+     "assets/img/rash5.png",
+     "99.0"
+    ), new rashGuard(
+    "16",
+    "Rash Guard - BRANCA",
+     "assets/img/rash6.png",
+     "109.0"
+     ),
+     new rashGuard(
+    "17",
+    "Rash Guard - PRETA",
+     "assets/img/rash7.png",
+     "109.0"
+     ),
+     new rashGuard(
+    "18",
+    "Rash Guard - MARROM",
+     "assets/img/rash8.png",
+     "109.0"
+     ),
+     new rashGuard(
+    "19",
+    "Rash Guard - ROXA",
+     "assets/img/rash9.png",
+     "109.0"
+    )]
+
+    
     var itensRoot = document.getElementById('itens-root');
-var col = document.createElement('div')
-    col.classList.add('col-4');
+    var col = document.createElement('div');
+
+    if(window.screen.width <=768){
+    col.classList.add('row','row-cols-auto');
+    console.log(col)
+    } else{
+    col.classList.add('row','row-cols-4');
+    }
     itensRoot.appendChild(col);
 
- for (let key of rashGuard){
+ for (let rashGuard of rashGuards){
     
   var card = document.createElement('div');
   card.classList.add('card');
   card.setAttribute('width','18rem');
   var img = document.createElement('img');
-  img.setAttribute('src',`${key.image}`);
+  img.setAttribute('src',`${rashGuard.image}`);
   img.classList.add('card-img-top');
   card.appendChild(img);
   var button = document.createElement('button');
@@ -69,10 +94,10 @@ var col = document.createElement('div')
   card.appendChild(cardBody);
   var cardTitle = document.createElement('h6');
   cardTitle.classList.add('card-title')
-  cardTitle.innerHTML = `${key.name}`;
+  cardTitle.innerHTML = `${rashGuard.name}`;
   var cardText = document.createElement('p');
   cardText.classList.add('card-text');
-  cardText.innerHTML = `R$${key.price}`
+  cardText.innerHTML = `R$${rashGuard.price}`
  card.appendChild(button);
  card.appendChild(cardTitle);
  card.appendChild(cardBody);
