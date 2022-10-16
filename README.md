@@ -16,6 +16,7 @@ Tela de saiba mais com informações da empresa.<br>
 
 
 A gestão do projeto foi feita com base no ciclo PDCA (Planejar, Executar, Checar, Agir) e as tarefas foram quebradas em cards do Trello com base no quadro Kanban. O Trello está disponível pelo link: https://trello.com/b/MOqsQN5t/projeto-1
+https://trello.com/b/gfzrKCno/projeto-2
 
 Como executar o projeto
 
